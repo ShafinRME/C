@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main()
+{
+    int i, j, k, s, n;
+    scanf("%d", &n);
+
+    k = 1;
+    s = n - 1;
+
+    for (i = 1; i <= 2 * n - 1; i++)
+    {
+        for (j = 1; j <= s; j++)
+        {
+            printf(" ");
+        }
+        for (j = 1; j <= k; j++)
+        {
+            printf("%d", j);
+        }
+
+        if (i < n)
+        {
+            s--;
+            k = k + 2;
+        }
+        else
+        {
+            s++;
+            k = k - 2;
+        }
+        printf("\n");
+    }
+    return 0;
+}
